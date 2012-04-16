@@ -18,60 +18,60 @@ Current pricing data available for services:
 
 == Examples
 
-	>> pp AWSPricing::CloudFront.data_transfer
-	{"valueColumns"=>["us", "eur", "hk-sin", "jap", "sa", "reservedCapPricing"],
-	 "rate"=>"perGB",
-	 "currencies"=>["USD"],
-	 "tiers"=>
-	  [{"regions"=>
-	     [{"name"=>"us", "prices"=>{"USD"=>"0.120"}},
-	      {"name"=>"eur", "prices"=>{"USD"=>"0.120"}},
-	      {"name"=>"hk-sin", "prices"=>{"USD"=>"0.190"}},
-	      {"name"=>"jap", "prices"=>{"USD"=>"0.201"}},
-	      {"name"=>"sa", "prices"=>{"USD"=>"0.250"}}],
-	    "name"=>"first10TB"},
-	   {"regions"=>
-	     [{"name"=>"us", "prices"=>{"USD"=>"0.080"}},
-	      {"name"=>"eur", "prices"=>{"USD"=>"0.080"}},
-	      {"name"=>"hk-sin", "prices"=>{"USD"=>"0.140"}},
-	      {"name"=>"jap", "prices"=>{"USD"=>"0.148"}},
-	      {"name"=>"sa", "prices"=>{"USD"=>"0.200"}}],
-	    "name"=>"next40TB"},
-	   {"regions"=>
-	     [{"name"=>"us", "prices"=>{"USD"=>"0.060"}},
-	      {"name"=>"eur", "prices"=>{"USD"=>"0.060"}},
-	      {"name"=>"hk-sin", "prices"=>{"USD"=>"0.120"}},
-	      {"name"=>"jap", "prices"=>{"USD"=>"0.127"}},
-	      {"name"=>"sa", "prices"=>{"USD"=>"0.180"}}],
-	    "name"=>"next100TB"},
-	   {"regions"=>
-	     [{"name"=>"us", "prices"=>{"USD"=>"0.040"}},
-	      {"name"=>"eur", "prices"=>{"USD"=>"0.040"}},
-	      {"name"=>"hk-sin", "prices"=>{"USD"=>"0.100"}},
-	      {"name"=>"jap", "prices"=>{"USD"=>"0.106"}},
-	      {"name"=>"sa", "prices"=>{"USD"=>"0.160"}}],
-	    "name"=>"next350TB"},
-	   {"regions"=>
-	     [{"name"=>"us", "prices"=>{"USD"=>"0.030"}},
-	      {"name"=>"eur", "prices"=>{"USD"=>"0.030"}},
-	      {"name"=>"hk-sin", "prices"=>{"USD"=>"0.080"}},
-	      {"name"=>"jap", "prices"=>{"USD"=>"0.085"}},
-	      {"name"=>"sa", "prices"=>{"USD"=>"0.140"}}],
-	    "name"=>"next05PB"},
-	   {"regions"=>
-	     [{"name"=>"us", "prices"=>{"USD"=>"0.025"}},
-	      {"name"=>"eur", "prices"=>{"USD"=>"0.025"}},
-	      {"name"=>"hk-sin", "prices"=>{"USD"=>"0.070"}},
-	      {"name"=>"jap", "prices"=>{"USD"=>"0.075"}},
-	      {"name"=>"sa", "prices"=>{"USD"=>"0.130"}}],
-	    "name"=>"next4PB"},
-	   {"regions"=>
-	     [{"name"=>"us", "prices"=>{"USD"=>"0.020"}},
-	      {"name"=>"eur", "prices"=>{"USD"=>"0.020"}},
-	      {"name"=>"hk-sin", "prices"=>{"USD"=>"0.060"}},
-	      {"name"=>"jap", "prices"=>{"USD"=>"0.065"}},
-	      {"name"=>"sa", "prices"=>{"USD"=>"0.125"}}],
-	    "name"=>"over5PB"}]}
+  >> pp AWSPricing::CloudFront.data_transfer
+  {"valueColumns"=>["us", "eur", "hk-sin", "jap", "sa", "reservedCapPricing"],
+   "rate"=>"perGB",
+   "currencies"=>["USD"],
+   "tiers"=>
+   [{"regions"=>
+     [{"name"=>"us", "prices"=>{"USD"=>"0.120"}},
+      {"name"=>"eur", "prices"=>{"USD"=>"0.120"}},
+      {"name"=>"hk-sin", "prices"=>{"USD"=>"0.190"}},
+      {"name"=>"jap", "prices"=>{"USD"=>"0.201"}},
+      {"name"=>"sa", "prices"=>{"USD"=>"0.250"}}],
+    "name"=>"first10TB"},
+   {"regions"=>
+     [{"name"=>"us", "prices"=>{"USD"=>"0.080"}},
+      {"name"=>"eur", "prices"=>{"USD"=>"0.080"}},
+      {"name"=>"hk-sin", "prices"=>{"USD"=>"0.140"}},
+      {"name"=>"jap", "prices"=>{"USD"=>"0.148"}},
+      {"name"=>"sa", "prices"=>{"USD"=>"0.200"}}],
+    "name"=>"next40TB"},
+   {"regions"=>
+     [{"name"=>"us", "prices"=>{"USD"=>"0.060"}},
+      {"name"=>"eur", "prices"=>{"USD"=>"0.060"}},
+      {"name"=>"hk-sin", "prices"=>{"USD"=>"0.120"}},
+      {"name"=>"jap", "prices"=>{"USD"=>"0.127"}},
+      {"name"=>"sa", "prices"=>{"USD"=>"0.180"}}],
+    "name"=>"next100TB"},
+   {"regions"=>
+     [{"name"=>"us", "prices"=>{"USD"=>"0.040"}},
+      {"name"=>"eur", "prices"=>{"USD"=>"0.040"}},
+      {"name"=>"hk-sin", "prices"=>{"USD"=>"0.100"}},
+      {"name"=>"jap", "prices"=>{"USD"=>"0.106"}},
+      {"name"=>"sa", "prices"=>{"USD"=>"0.160"}}],
+    "name"=>"next350TB"},
+   {"regions"=>
+     [{"name"=>"us", "prices"=>{"USD"=>"0.030"}},
+      {"name"=>"eur", "prices"=>{"USD"=>"0.030"}},
+      {"name"=>"hk-sin", "prices"=>{"USD"=>"0.080"}},
+      {"name"=>"jap", "prices"=>{"USD"=>"0.085"}},
+      {"name"=>"sa", "prices"=>{"USD"=>"0.140"}}],
+    "name"=>"next05PB"},
+   {"regions"=>
+     [{"name"=>"us", "prices"=>{"USD"=>"0.025"}},
+      {"name"=>"eur", "prices"=>{"USD"=>"0.025"}},
+      {"name"=>"hk-sin", "prices"=>{"USD"=>"0.070"}},
+      {"name"=>"jap", "prices"=>{"USD"=>"0.075"}},
+      {"name"=>"sa", "prices"=>{"USD"=>"0.130"}}],
+    "name"=>"next4PB"},
+   {"regions"=>
+     [{"name"=>"us", "prices"=>{"USD"=>"0.020"}},
+      {"name"=>"eur", "prices"=>{"USD"=>"0.020"}},
+      {"name"=>"hk-sin", "prices"=>{"USD"=>"0.060"}},
+      {"name"=>"jap", "prices"=>{"USD"=>"0.065"}},
+      {"name"=>"sa", "prices"=>{"USD"=>"0.125"}}],
+    "name"=>"over5PB"}]}
 
 
 
