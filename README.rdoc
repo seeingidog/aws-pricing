@@ -1,6 +1,6 @@
 = aws-pricing
 
-Description goes here.
+Simpler interface to AWS pricing data.
 
 == Contributing to aws-pricing
  
