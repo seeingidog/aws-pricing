@@ -2,6 +2,25 @@
 
 Simpler interface to AWS pricing data.
 
+== Scope of data available
+
+Current pricing data available for services:
+
+* EC2
+* S3
+* RDS
+* Cloudfront
+* Elastic MapReduce
+
+== Installation
+
+  gem 'aws-pricing'
+
+== Examples
+
+
+
+
 == Contributing to aws-pricing
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
