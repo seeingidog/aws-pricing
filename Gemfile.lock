@@ -33,5 +33,6 @@ DEPENDENCIES
   bundler (~> 1.0.0)
   httparty
   jeweler (~> 1.8.3)
+  json
   rdoc (~> 3.12)
   rspec (~> 2.8.0)
