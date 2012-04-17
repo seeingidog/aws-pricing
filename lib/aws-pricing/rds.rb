@@ -1,13 +1,14 @@
-#http://aws.amazon.com/rds/pricing/mysql/pricing-standard-deployments.json
-#http://aws.amazon.com/rds/pricing/mysql/pricing-multiAZ-deployments.json
-
 module AWSPricing
   class RDS < Base
+    #Relation Database Service pricing data
+    
   
+    #Returns Hash of standard deployment pricing information
     def self.standard
       Base.get('/rds/pricing/mysql/pricing-standard-deployments.json')
     end
-  
+    
+    #Returns Hash of multi-availability zone deployment pricing information
     def self.multi_az
       Base.get('/rds/pricing/mysql/pricing-multiAZ-deployments.json')
     end
