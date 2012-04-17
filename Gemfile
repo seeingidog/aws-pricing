@@ -1,6 +1,7 @@
 source "http://rubygems.org"
 
 gem 'httparty'
+gem 'json'
 
 group :development do
   gem "rspec", "~> 2.8.0"

@@ -3,9 +3,17 @@ module AWSPricing
     #Elastic Compute pricing data
     
   
-    #Returns Hash of server instance pricing information
+    #Returns Hash of on-demand server instance pricing information
     def self.instances
       Base.get('/ec2/pricing/pricing-on-demand-instances.json')
+    end
+    
+    #Returns Hash of current spot instance pricing information (5m)
+    def self.spot_instances
+      callback_response = Net::HTTP.get_response(URI.parse 'http://spot-price.s3.amazonaws.com/spot.js').body
+      callback_response.gsub!('callback(','')
+      callback_response.slice!(callback_response.length-1)
+      JSON.parse callback_response
     end
   
     #Returns Hash of elastic block storage pricing information
@@ -32,6 +40,6 @@ module AWSPricing
     def self.elb
       Base.get('/ec2/pricing/pricing-elb.json')
     end
-  
+      
   end
 end

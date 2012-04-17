@@ -27,6 +27,10 @@ describe "AwsPricing" do
       AWSPricing::EC2.elastic_ips.class.should == Hash
     end
     
+    it "returns a hash of spot instance pricing from jsonp callback hack" do
+      AWSPricing::EC2.spot_instances.class.should == Hash
+    end
+    
     
   end
   
