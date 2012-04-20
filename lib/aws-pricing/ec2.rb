@@ -1,5 +1,5 @@
 module AWSPricing
-  class EC2 < Base
+  class EC2
     #Elastic Compute pricing data
     
   

@@ -1,5 +1,5 @@
 module AWSPricing
-  class S3 < Base 
+  class S3
     #Simple Storage Service pricing data
     
     #Returns Hash of storage pricing information   

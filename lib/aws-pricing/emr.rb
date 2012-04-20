@@ -1,5 +1,5 @@
 module AWSPricing
-  class EMR < Base
+  class EMR
     #Elastic MapReduce Service pricing data
     
   

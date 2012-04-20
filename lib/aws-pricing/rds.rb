@@ -1,5 +1,5 @@
 module AWSPricing
-  class RDS < Base
+  class RDS
     #Relation Database Service pricing data
     
   

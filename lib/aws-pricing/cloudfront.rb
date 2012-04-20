@@ -1,5 +1,5 @@
 module AWSPricing
-  class CloudFront < Base
+  class CloudFront
     #Cloudfront pricing data
   
   
