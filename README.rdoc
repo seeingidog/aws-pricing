@@ -1,5 +1,7 @@
 = aws-pricing
 
+{<img src="https://secure.travis-ci.org/seeingidog/aws-pricing.png?branch=master" alt="Build Status" />}[http://travis-ci.org/seeingidog/aws-pricing]
+
 Simpler interface to AWS pricing data. Uses Amazon's unofficial json price URLs.
 
 == Scope of data available
