@@ -5,7 +5,7 @@ module AWSPricing
   
     #Returns Hash of pricing information
     def self.pricing
-      Base.get('/elasticmapreduce/pricing/pricing-emr.json')
+      Base.get('/elasticmapreduce/pricing/pricing-emr')
     end
     
   end

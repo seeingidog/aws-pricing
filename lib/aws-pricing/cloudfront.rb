@@ -5,12 +5,12 @@ module AWSPricing
   
     #Returns Hash of request pricing information
     def self.requests
-      Base.get('/cloudfront/pricing/pricing-cloudfront-requests.json')
+      Base.get('/cloudfront/pricing/pricing-cloudfront-requests')
     end
     
     #Returns Hash of data transfer pricing information
     def self.data_transfer
-      Base.get('/cloudfront/pricing/pricing-cloudfront-on-demand.json')
+      Base.get('/cloudfront/pricing/pricing-cloudfront-on-demand')
     end
   
   end

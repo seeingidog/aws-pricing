@@ -4,17 +4,17 @@ module AWSPricing
     
     #Returns Hash of storage pricing information   
     def self.storage
-      Base.get('/s3/pricing/pricing-storage.json')
+      Base.get('/s3/pricing/pricing-storage')
     end
     
     #Returns Hash of data transfer pricing information   
     def self.data_transfer
-      Base.get('/s3/pricing/pricing-data-transfer.json')
+      Base.get('/s3/pricing/pricing-data-transfer')
     end
     
     #Returns Hash of request pricing information
     def self.requests
-      Base.get('/s3/pricing/pricing-requests.json')
+      Base.get('/s3/pricing/pricing-requests')
     end
   end
   
