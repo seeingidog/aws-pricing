@@ -2,10 +2,12 @@ module AWSPricing
   class EC2
     #Elastic Compute pricing data
     
+    EC2_BASE_URL = '/ec2/pricing/pricing-'
+    
   
     #Returns Hash of on-demand server instance pricing information
     def self.instances
-      Base.get('/ec2/pricing/pricing-on-demand-instances')
+      Base.get(EC2_BASE_URL + 'on-demand-instances')
     end
     
     #Returns Hash of current spot instance pricing information (5m)
@@ -18,27 +20,27 @@ module AWSPricing
   
     #Returns Hash of elastic block storage pricing information
     def self.ebs
-      Base.get('/ec2/pricing/pricing-ebs')
+      Base.get(EC2_BASE_URL + 'ebs')
     end
   
     #Returns Hash of data transfer pricing information
     def self.data_transfer
-      Base.get('/ec2/pricing/pricing-data-transfer')
+      Base.get(EC2_BASE_URL + 'data-transfer')
     end
     
     #Returns Hash of elastic IP pricing information
     def self.elastic_ips
-      Base.get('/ec2/pricing/pricing-elastic-ips')
+      Base.get(EC2_BASE_URL + 'elastic-ips')
     end
     
     #Returns Hash of Cloudwatch monitoring pricing information
     def self.cloud_watch
-      Base.get('/ec2/pricing/pricing-cloudwatch')
+      Base.get(EC2_BASE_URL + 'cloudwatch')
     end
     
     #Returns Hash of elastic loadbalancer pricing information
     def self.elb
-      Base.get('/ec2/pricing/pricing-elb')
+      Base.get(EC2_BASE_URL + 'elb')
     end
       
   end
