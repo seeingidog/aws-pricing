@@ -8,7 +8,45 @@ describe "AwsPricing" do
     it "returns a hash of instance pricing" do
       EC2.instances.class.should == Hash
     end
+
+    describe "reserved instances" do
+      it "returns a hash of reserved linux heavy utilization instance pricing by default" do
+        EC2.reserved_instances.class.should == Hash
+      end
+      it "returns a hash of reserved linux light utilization instance pricing" do
+        EC2.reserved_instances(:os => :linux, :utilization => :light).class.should == Hash
+      end
   
+      it "returns a hash of reserved linux medium utilization instance pricing" do
+        EC2.reserved_instances(:os => :linux, :utilization => :medium).class.should == Hash
+      end
+
+      it "returns a hash of reserved linux heavy utlization instance pricing" do
+        EC2.reserved_instances(:os => :linux, :utilization => :heavy).class.should == Hash
+      end
+
+
+      it "returns a hash of reserved mswin light utilization instance pricing" do
+        EC2.reserved_instances(:os => :mswin, :utilization => :light).class.should == Hash
+      end
+
+      it "returns a hash of reserved mswin medium utilization instance pricing" do
+        EC2.reserved_instances(:os => :mswin, :utilization => :medium).class.should == Hash
+      end
+
+      it "returns a hash of reserved mswin heavy utlization instance pricing" do
+        EC2.reserved_instances(:os => :mswin, :utilization => :heavy).class.should == Hash
+      end
+
+      it "raises an error if invalid os is provided" do
+        lambda { EC2.reserved_instances(:os => :macosx) }.should raise_error
+      end
+
+      it "raises an error if invalid utilization is provided" do
+        lambda { EC2.reserved_instances(:utilization => :none) }.should raise_error
+      end
+    end
+
     it "returns a hash of ebs pricing" do
       EC2.ebs.class.should == Hash
     end
