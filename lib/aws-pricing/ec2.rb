@@ -2,14 +2,27 @@ module AWSPricing
   class EC2
     #Elastic Compute pricing data
     
-    EC2_BASE_URL = '/ec2/pricing/pricing-'
     
   
+    EC2_BASE_URL          = '/ec2/pricing/pricing-'
+    EC2_RESERVED_BASE_URL = '/ec2/pricing/'
+
     #Returns Hash of on-demand server instance pricing information
     def self.instances
       Base.get(EC2_BASE_URL + 'on-demand-instances')
     end
-    
+
+    #Returns Hash of reserved server instance pricing information
+    def self.reserved_instances(options = {})
+      os          = options[:os]          || 'linux'
+      utilization = options[:utilization] || 'heavy'
+
+      raise "AWSPricing: Invalid OS" unless /^linux|mswin+$/ =~ os
+      raise "AWSPricing: Invalid Utilization" unless /^light|medium|heavy$/ =~ utilization
+  
+      Base.get(EC2_RESERVED_BASE_URL + "ri-#{utilization}-#{os}")
+    end
+  
     #Returns Hash of current spot instance pricing information (5m)
     def self.spot_instances
       callback_response = Net::HTTP.get_response(URI.parse 'http://spot-price.s3.amazonaws.com/spot.js').body
