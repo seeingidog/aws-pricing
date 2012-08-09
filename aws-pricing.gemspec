@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "aws-pricing"
-  s.version = "0.5.0"
+  s.version = "0.6.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Ian Morgan"]
-  s.date = "2012-07-15"
+  s.date = "2012-08-09"
   s.description = "Simpler interface to AWS pricing data"
   s.email = "ian@ruby-code.com"
   s.extra_rdoc_files = [
