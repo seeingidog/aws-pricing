@@ -14,8 +14,8 @@ module AWSPricing
 
     #Returns Hash of reserved server instance pricing information
     def self.reserved_instances(options = {})
-      os          = options[:os]          || 'linux'
-      utilization = options[:utilization] || 'heavy'
+      os          = options[:os].to_s          || 'linux'
+      utilization = options[:utilization].to_s || 'heavy'
 
       raise "AWSPricing: Invalid OS" unless /^linux|mswin+$/ =~ os
       raise "AWSPricing: Invalid Utilization" unless /^light|medium|heavy$/ =~ utilization
