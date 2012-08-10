@@ -14,13 +14,12 @@ module AWSPricing
 
     #Returns Hash of reserved server instance pricing information
     def self.reserved_instances(options = {})
-      os          = options[:os].to_s          || 'linux'
-      utilization = options[:utilization].to_s || 'heavy'
+      opts = { :os => 'linux', :utilization => 'heavy' }.merge(options)
 
-      raise "AWSPricing: Invalid OS" unless /^linux|mswin+$/ =~ os
-      raise "AWSPricing: Invalid Utilization" unless /^light|medium|heavy$/ =~ utilization
-  
-      Base.get(EC2_RESERVED_BASE_URL + "ri-#{utilization}-#{os}")
+      raise "AWSPricing: Invalid OS" unless /^linux|mswin+$/ =~ opts[:os].to_s
+      raise "AWSPricing: Invalid Utilization" unless /^light|medium|heavy$/ =~ opts[:utilization].to_s
+
+      Base.get(EC2_RESERVED_BASE_URL + "ri-#{opts[:utilization]}-#{opts[:os]}")
     end
   
     #Returns Hash of current spot instance pricing information (5m)
