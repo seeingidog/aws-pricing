@@ -115,8 +115,19 @@ describe "AwsPricing" do
     it "returns a hash of standard deployment pricing" do
       Elasticache.pricing.class.should == Hash
     end
-        
   end
+  
+  describe "Glacier pricing" do
+    it "returns a hash of storage pricing" do
+      Glacier.storage.class.should == Hash
+    end
+    
+    it "returns a hash of data transfer pricing" do
+      Glacier.transfer.class.should == Hash
+    end
+    
+  end
+  
   
 end
 
