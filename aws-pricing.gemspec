@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Ian Morgan"]
-  s.date = "2012-08-09"
+  s.date = "2012-11-29"
   s.description = "Simpler interface to AWS pricing data"
   s.email = "ian@ruby-code.com"
   s.extra_rdoc_files = [
@@ -29,11 +29,13 @@ Gem::Specification.new do |s|
     "aws-pricing.gemspec",
     "lib/aws-pricing.rb",
     "lib/aws-pricing/base.rb",
-    "lib/aws-pricing/cloudfront.rb",
-    "lib/aws-pricing/ec2.rb",
-    "lib/aws-pricing/emr.rb",
-    "lib/aws-pricing/rds.rb",
-    "lib/aws-pricing/s3.rb",
+    "lib/aws-pricing/products/cloudfront.rb",
+    "lib/aws-pricing/products/ec2.rb",
+    "lib/aws-pricing/products/elasticache.rb",
+    "lib/aws-pricing/products/emr.rb",
+    "lib/aws-pricing/products/glacier.rb",
+    "lib/aws-pricing/products/rds.rb",
+    "lib/aws-pricing/products/s3.rb",
     "spec/aws-pricing_spec.rb",
     "spec/spec_helper.rb"
   ]
