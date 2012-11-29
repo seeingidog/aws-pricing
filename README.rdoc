@@ -15,6 +15,7 @@ Current pricing data available for services:
 * Cloudfront
 * Elastic MapReduce
 * Elasticache
+* Glacier
 
 == Installation
 
