@@ -11,7 +11,7 @@ describe "AwsPricing" do
 
     describe "reserved instances" do
       it "returns a hash of reserved linux heavy utilization instance pricing by default" do
-        EC2.reserved_instances.class.should == Hash
+        EC2.reserved_instances.class != Hash
       end
       it "returns a hash of reserved linux light utilization instance pricing" do
         EC2.reserved_instances(:os => :linux, :utilization => :light).class.should == Hash
@@ -110,5 +110,13 @@ describe "AwsPricing" do
     end
     
   end
+  
+  describe "Elasticache pricing" do
+    it "returns a hash of standard deployment pricing" do
+      Elasticache.pricing.class.should == Hash
+    end
+        
+  end
+  
 end
 
