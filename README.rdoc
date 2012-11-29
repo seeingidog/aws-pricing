@@ -1,7 +1,6 @@
 = aws-pricing
 
 {<img src="https://secure.travis-ci.org/seeingidog/aws-pricing.png?branch=master" alt="Build Status" />}[http://travis-ci.org/seeingidog/aws-pricing]
-{<img src="https://gemnasium.com/seeingidog/aws-pricing.png" alt="Dependency Status" />}[https://gemnasium.com/seeingidog/aws-pricing]
 {<img src="https://codeclimate.com/badge.png" />}[https://codeclimate.com/github/seeingidog/aws-pricing]
 
 Simpler interface to AWS pricing data. Uses Amazon's unofficial json price URLs.
